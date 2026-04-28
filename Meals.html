@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+<meta charset="UTF-8">
+<title>الأصناف - Damas Sweets</title>
+<link rel="stylesheet" href="styles.css">
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+
+<h1 class="main-title">قائمة الأصناف</h1>
+
+<table class="menu-table">
+
+<tr>
+<th>الرمز</th>
+<th>العنوان</th>
+<th>السعر</th>
+<th>التفاصيل</th>
+<th>اختيار</th>
+</tr>
+
+<tr>
+<td>DS-001</td>
+<td>كنافة ناعمة</td>
+<td>330 ليرة سورية جديدة</td>
+<td><button onclick="toggleDetails(this)">عرض</button></td>
+<td><input type="checkbox" value="330" data-name="كنافة ناعمة"></td>
+</tr>
+
+<tr class="details-row" style="display:none;">
+<td colspan="5">
+<img src="kunafa.jpg">
+<p><b>المطبخ:</b> سوري</p>
+<p><b>التصنيف:</b> شرقي - سوري</p>
+<p><b>المكونات:</b> شعيرية، جبنة، قطر، فستق</p>
+<p class="weight">الوزن: 500 جرام</p>
+</td>
+</tr>
+
+<tr>
+<td>DS-002</td>
+<td>مدلوقة بالقشطة</td>
+<td>150 ليرة سورية جديدة</td>
+<td><button onclick="toggleDetails(this)">عرض</button></td>
+<td><input type="checkbox" value="150" data-name="مدلوقة بالقشطة"></td>
+</tr>
+
+<tr class="details-row" style="display:none;">
+<td colspan="5">
+<img src="madlouka.jpg">
+<p><b>المطبخ:</b> سوري</p>
+<p><b>التصنيف:</b> شرقي - سوري</p>
+<p><b>المكونات:</b> سميد، سكر، قشطة</p>
+<p class="weight">الوزن: 250 جرام</p>
+</td>
+</tr>
+
+<tr>
+<td>DS-003</td>
+<td>حلاوة الجبن</td>
+<td>170 ليرة سورية جديدة</td>
+<td><button onclick="toggleDetails(this)">عرض</button></td>
+<td><input type="checkbox" value="170" data-name="حلاوة الجبن"></td>
+</tr>
+
+<tr class="details-row" style="display:none;">
+<td colspan="5">
+<img src="halawet.jpg">
+<p><b>المطبخ:</b> سوري</p>
+<p><b>التصنيف:</b> شرقي - سوري</p>
+<p><b>المكونات:</b> جبنة، سميد، قطر</p>
+<p class="weight">الوزن: 400 جرام</p>
+</td>
+</tr>
+
+<tr>
+<td>DS-004</td>
+<td>تشيز كيك</td>
+<td>250 ليرة سورية جديدة</td>
+<td><button onclick="toggleDetails(this)">عرض</button></td>
+<td><input type="checkbox" value="250" data-name="تشيز كيك"></td>
+</tr>
+
+<tr class="details-row" style="display:none;">
+<td colspan="5">
+<img src="cheesecake.jpg">
+<p><b>المطبخ:</b> أمريكي</p>
+<p><b>التصنيف:</b> غربي - أمريكي</p>
+<p><b>النكهات:</b> فراولة - كرز - مانجو</p>
+<p class="weight">الوزن: 600 جرام</p>
+</td>
+</tr>
+
+<tr>
+<td>DS-005</td>
+<td>كيك الشوكولا</td>
+<td>370 ليرة سورية جديدة</td>
+<td><button onclick="toggleDetails(this)">عرض</button></td>
+<td><input type="checkbox" value="370" data-name="كيك الشوكولا"></td>
+</tr>
+
+<tr class="details-row" style="display:none;">
+<td colspan="5">
+<img src="cake.jpg">
+<p><b>المطبخ:</b> أوروبي</p>
+<p><b>التصنيف:</b> غربي</p>
+<p><b>الأنواع:</b> داكنة - بيضاء - سويسرية</p>
+<p class="weight">الوزن: 1 كيلو</p>
+</td>
+</tr>
+
+<tr>
+<td>DS-006</td>
+<td>تيراميسو</td>
+<td>190 ليرة سورية جديدة</td>
+<td><button onclick="toggleDetails(this)">عرض</button></td>
+<td><input type="checkbox" value="190" data-name="تيراميسو"></td>
+</tr>
+
+<tr class="details-row" style="display:none;">
+<td colspan="5">
+<img src="tiramisu.jpg">
+<p><b>المطبخ:</b> إيطالي</p>
+<p><b>التصنيف:</b> غربي - إيطالي</p>
+<p><b>الإضافات:</b> فواكه</p>
+<p class="weight">الوزن: 200 جرام</p>
+</td>
+</tr>
+
+</table>
+
+<div class="next-btn">
+<button onclick="goToForm()">متابعة</button>
+</div>
+
+<div id="form-section" style="display:none; margin-top:30px;">
+<h2>إدخال بيانات الزبون</h2>
+
+<form onsubmit="return validateForm()">
+
+<label>الاسم الكامل:</label>
+<input type="text" id="name"><br><br>
+
+<label>الرقم الوطني:</label>
+<input type="text" id="national" required><br><br>
+
+<label>تاريخ الولادة:</label>
+<input type="text" id="birth"><br><br>
+
+<label>رقم الموبايل:</label>
+<input type="text" id="phone"><br><br>
+
+<label>الإيميل:</label>
+<input type="text" id="email"><br><br>
+
+<button type="submit">إرسال</button>
+
+</form>
+</div>
+
+<div id="result-box" style="display:none;">
+<h2>تفاصيل الطلب</h2>
+<div id="order-details"></div>
+</div>
+
+<script>
+
+function toggleDetails(btn) {
+    let row = $(btn).closest("tr").next();
+    row.toggle();
+}
+
+function goToForm() {
+    let selected = false;
+
+    $("input[type='checkbox']").each(function () {
+        if ($(this).is(":checked")) {
+            selected = true;
+        }
+    });
+
+    if (!selected) {
+        alert("يجب اختيار صنف واحد على الأقل");
+    } else {
+        $("#form-section").show();
+    }
+}
+
+function validateForm() {
+
+    let name = $("#name").val();
+    let national = $("#national").val();
+    let birth = $("#birth").val();
+    let phone = $("#phone").val();
+    let email = $("#email").val();
+
+    if (name !== "" && !/^[\u0600-\u06FF\s]+$/.test(name)) {
+        alert("الاسم يجب أن يكون عربي");
+        return false;
+    }
+
+    if (!/^\d{11}$/.test(national)) {
+        alert("الرقم الوطني يجب أن يكون 11 رقم");
+        return false;
+    }
+
+    if (birth !== "" && !/^\d{1,2}-\d{1,2}-\d{4}$/.test(birth)) {
+        alert("تاريخ الميلاد غير صحيح");
+        return false;
+    }
+
+    if (phone !== "" && !/^09\d{8}$/.test(phone)) {
+        alert("رقم الهاتف يجب أن يبدأ بـ 09");
+        return false;
+    }
+
+    if (email !== "" && !/^\S+@\S+\.\S+$/.test(email)) {
+        alert("الإيميل غير صحيح");
+        return false;
+    }
+
+    let total = 0;
+    let items = "";
+
+    $("input[type='checkbox']:checked").each(function () {
+        let price = parseInt($(this).val());
+        let name = $(this).data("name");
+
+        total += price;
+        items += "<p>• " + name + " - " + price + " ل.س</p>";
+    });
+
+    let finalPrice = total * 0.95;
+
+    let resultHTML = `
+        <h3>الطلبات المختارة:</h3>
+        ${items}
+        <hr>
+        <p><b>المجموع:</b> ${total} ل.س</p>
+        <p><b>بعد الخصم (5%):</b> ${finalPrice.toFixed(2)} ل.س</p>
+    `;
+
+    $("#order-details").html(resultHTML);
+    $("#result-box").show();
+
+    return false;
+}
+
+</script>
+
+</body>
+</html>

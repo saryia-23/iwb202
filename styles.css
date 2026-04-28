@@ -1,0 +1,275 @@
+body {
+  margin: 0;
+  font-family: Arial;
+  background-color: #f5f5f5;
+  direction: rtl;
+  color: black;
+}
+
+.header {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.header h1 {
+  font-size: 24px;
+}
+
+.course {
+  font-size: 30px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  margin-top: 10px;
+}
+
+.students {
+  width: 80%;
+  margin: 40px auto;
+}
+
+.student {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: white;
+  padding: 15px;
+  margin: 10px 0;
+  border-radius: 10px;
+  font-size: 18px;
+}
+
+.arabic {
+  text-align: right;
+  font-weight: bold;
+}
+
+.english {
+  direction: ltr;
+  text-align: center;
+}
+
+.id {
+  direction: ltr;
+  text-align: left;
+  color: #555;
+}
+
+.publish-link {
+  display: block;
+  text-align: center;
+  margin-top: 20px;
+  font-style: italic;
+  text-decoration: underline;
+  color: #0d47a1;
+}
+
+.publish-link:hover {
+  color: #1565c0;
+}
+
+.next-container {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.btn-next {
+  display: inline-block;
+  padding: 12px 25px;
+  background-color: #333;
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  border-radius: 5px;
+}
+
+.btn-next:hover {
+  background-color: #555;
+}
+
+.title {
+  text-align: center;
+  font-size: 36px;
+}
+
+.subtitle {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.about-box {
+  border: 1px solid black;
+  padding: 15px;
+  margin-bottom: 20px;
+  background-color: white;
+}
+
+.section-title {
+  border-bottom: 2px solid black;
+  padding-bottom: 5px;
+  margin-top: 20px;
+}
+
+.menu-list {
+  list-style-type: square;
+  margin-right: 20px;
+}
+
+.info {
+  margin-right: 10px;
+}
+
+.nav-buttons {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.btn {
+  display: inline-block;
+  background-color: gray;
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  margin: 5px;
+}
+
+.btn:hover {
+  background-color: #555;
+}
+
+.main-title {
+  text-align: center;
+  color: #333;
+  margin-top: 20px;
+  font-size: 28px;
+}
+
+.menu-table {
+  width: 90%;
+  margin: 20px auto;
+  border-collapse: collapse;
+  background-color: white;
+}
+
+.menu-table th {
+  background-color: #333;
+  color: white;
+  padding: 12px;
+}
+
+.menu-table td {
+  padding: 10px;
+  text-align: center;
+  border: 1px solid #ccc;
+}
+
+.menu-table tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.menu-table tr:hover {
+  background-color: #ddd;
+}
+
+.menu-table button {
+  padding: 6px 12px;
+  background-color: #ff9800;
+  border: none;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.menu-table button:hover {
+  background-color: #e68900;
+}
+
+.details-row img {
+  width: 220px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.details-row p {
+  margin: 5px 0;
+  font-size: 14px;
+}
+
+.weight {
+  color: #d35400;
+  font-weight: bold;
+}
+
+.next-btn {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.next-btn button {
+  padding: 10px 25px;
+  font-size: 16px;
+  background-color: #ff5722;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.next-btn button:hover {
+  background-color: #e64a19;
+}
+
+#form-section {
+  width: 50%;
+  margin: 30px auto;
+  padding: 20px;
+  border: 2px solid #ddd;
+  border-radius: 10px;
+  background-color: #fafafa;
+}
+
+#form-section h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#form-section input {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+#form-section button {
+  margin-top: 15px;
+  width: 100%;
+  padding: 10px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+#form-section button:hover {
+  background-color: #45a049;
+}
+
+#result-box {
+  width: 50%;
+  margin: 30px auto;
+  padding: 20px;
+  border: 2px solid #4CAF50;
+  border-radius: 10px;
+  background-color: #f0fff0;
+}
+
+#result-box h2 {
+  text-align: center;
+  color: #2e7d32;
+}
+
+#order-details {
+  font-size: 16px;
+  line-height: 1.8;
+}
